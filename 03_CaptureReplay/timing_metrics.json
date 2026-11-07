@@ -1,0 +1,47 @@
+{
+  "testSuite": "Search Products Flow",
+  "method": "Capture/Replay (Selenium IDE / Playwright Codegen)",
+  "testedUrl": "https://my-app-nextjs-xi.vercel.app/",
+  "executedAt": "2026-11-03T10:37:14.323Z",
+  "runsCount": 3,
+  "totalAvgDurationSec": 11.24,
+  "totalAvgDurationMs": 11240,
+  "overallPassRate": "100%",
+  "summary": [
+    {
+      "testId": "TC01",
+      "name": "Exact Name Search",
+      "avgDurationMs": 2351,
+      "avgDurationSec": 2.35,
+      "passRate": "100%"
+    },
+    {
+      "testId": "TC02",
+      "name": "Partial Name Search",
+      "avgDurationMs": 2193,
+      "avgDurationSec": 2.19,
+      "passRate": "100%"
+    },
+    {
+      "testId": "TC03",
+      "name": "Keyword and Category Filter",
+      "avgDurationMs": 2203,
+      "avgDurationSec": 2.2,
+      "passRate": "100%"
+    },
+    {
+      "testId": "TC04",
+      "name": "Non-Existent Product Search",
+      "avgDurationMs": 2169,
+      "avgDurationSec": 2.17,
+      "passRate": "100%"
+    },
+    {
+      "testId": "TC05",
+      "name": "Empty Keyword and All Categories",
+      "avgDurationMs": 2324,
+      "avgDurationSec": 2.32,
+      "passRate": "100%"
+    }
+  ]
+}
