@@ -1,0 +1,314 @@
+{
+  "id": "c1a8d052-b88e-4861-a47f-827cb6e156d9",
+  "version": "2.0",
+  "name": "Search_Products_CaptureReplay",
+  "url": "https://my-app-nextjs-xi.vercel.app",
+  "tests": [
+    {
+      "id": "tc01-exact-name-search",
+      "name": "TC01 - Exact Name Search",
+      "commands": [
+        {
+          "id": "cmd-01-open",
+          "comment": "Open website",
+          "command": "open",
+          "target": "/",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cmd-01-set-window",
+          "comment": "Set window size",
+          "command": "setWindowSize",
+          "target": "1280x800",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cmd-01-click-search",
+          "comment": "Click on search input",
+          "command": "click",
+          "target": "css=[data-testid=\"search-input\"]",
+          "targets": [
+            ["css=[data-testid=\"search-input\"]", "css:data-testid"],
+            ["name=q", "name"],
+            ["xpath=//input[@name='q']", "xpath:attributes"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "cmd-01-type-search",
+          "comment": "Type exact product name",
+          "command": "type",
+          "target": "css=[data-testid=\"search-input\"]",
+          "targets": [
+            ["css=[data-testid=\"search-input\"]", "css:data-testid"],
+            ["name=q", "name"]
+          ],
+          "value": "Ripple Glass Set"
+        },
+        {
+          "id": "cmd-01-click-submit",
+          "comment": "Click search submit button",
+          "command": "click",
+          "target": "css=[data-testid=\"btn-search\"]",
+          "targets": [
+            ["css=[data-testid=\"btn-search\"]", "css:data-testid"],
+            ["xpath=//button[@type='submit']", "xpath:attributes"],
+            ["xpath=//button[contains(text(),'Search')]", "xpath:innerText"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "cmd-01-assert-product",
+          "comment": "Verify Ripple Glass Set is shown",
+          "command": "assertText",
+          "target": "xpath=//h3[contains(text(),'Ripple Glass Set')]",
+          "targets": [
+            ["xpath=//h3[contains(text(),'Ripple Glass Set')]", "xpath:innerText"]
+          ],
+          "value": "Ripple Glass Set"
+        }
+      ]
+    },
+    {
+      "id": "tc02-partial-name-search",
+      "name": "TC02 - Partial Name Search (Case-insensitive)",
+      "commands": [
+        {
+          "id": "cmd-02-open",
+          "comment": "Open website",
+          "command": "open",
+          "target": "/",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cmd-02-click-search",
+          "comment": "Click on search input",
+          "command": "click",
+          "target": "css=[data-testid=\"search-input\"]",
+          "targets": [
+            ["css=[data-testid=\"search-input\"]", "css:data-testid"],
+            ["name=q", "name"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "cmd-02-type-search",
+          "comment": "Type partial keyword",
+          "command": "type",
+          "target": "css=[data-testid=\"search-input\"]",
+          "targets": [
+            ["css=[data-testid=\"search-input\"]", "css:data-testid"],
+            ["name=q", "name"]
+          ],
+          "value": "lamp"
+        },
+        {
+          "id": "cmd-02-click-submit",
+          "comment": "Click search submit button",
+          "command": "click",
+          "target": "css=[data-testid=\"btn-search\"]",
+          "targets": [
+            ["css=[data-testid=\"btn-search\"]", "css:data-testid"],
+            ["xpath=//button[@type='submit']", "xpath:attributes"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "cmd-02-assert-product",
+          "comment": "Verify Mori Table Lamp is shown",
+          "command": "assertText",
+          "target": "xpath=//h3[contains(text(),'Mori Table Lamp')]",
+          "targets": [
+            ["xpath=//h3[contains(text(),'Mori Table Lamp')]", "xpath:innerText"]
+          ],
+          "value": "Mori Table Lamp"
+        }
+      ]
+    },
+    {
+      "id": "tc03-keyword-and-category",
+      "name": "TC03 - Search with Keyword and Category Filter",
+      "commands": [
+        {
+          "id": "cmd-03-open",
+          "comment": "Open website",
+          "command": "open",
+          "target": "/",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cmd-03-type-search",
+          "comment": "Type keyword table",
+          "command": "type",
+          "target": "css=[data-testid=\"search-input\"]",
+          "targets": [
+            ["css=[data-testid=\"search-input\"]", "css:data-testid"],
+            ["name=q", "name"]
+          ],
+          "value": "table"
+        },
+        {
+          "id": "cmd-03-select-category",
+          "comment": "Select category Lighting",
+          "command": "select",
+          "target": "css=[data-testid=\"category-select\"]",
+          "targets": [
+            ["css=[data-testid=\"category-select\"]", "css:data-testid"],
+            ["name=category", "name"]
+          ],
+          "value": "label=Lighting"
+        },
+        {
+          "id": "cmd-03-click-submit",
+          "comment": "Click search submit button",
+          "command": "click",
+          "target": "css=[data-testid=\"btn-search\"]",
+          "targets": [
+            ["css=[data-testid=\"btn-search\"]", "css:data-testid"],
+            ["xpath=//button[@type='submit']", "xpath:attributes"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "cmd-03-assert-product",
+          "comment": "Verify Mori Table Lamp is found under Lighting",
+          "command": "assertText",
+          "target": "xpath=//h3[contains(text(),'Mori Table Lamp')]",
+          "targets": [
+            ["xpath=//h3[contains(text(),'Mori Table Lamp')]", "xpath:innerText"]
+          ],
+          "value": "Mori Table Lamp"
+        }
+      ]
+    },
+    {
+      "id": "tc04-no-results-found",
+      "name": "TC04 - Search Non-Existent Product",
+      "commands": [
+        {
+          "id": "cmd-04-open",
+          "comment": "Open website",
+          "command": "open",
+          "target": "/",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cmd-04-type-search",
+          "comment": "Type non-existent product keyword",
+          "command": "type",
+          "target": "css=[data-testid=\"search-input\"]",
+          "targets": [
+            ["css=[data-testid=\"search-input\"]", "css:data-testid"],
+            ["name=q", "name"]
+          ],
+          "value": "Laptop Dell XPS"
+        },
+        {
+          "id": "cmd-04-click-submit",
+          "comment": "Click search submit button",
+          "command": "click",
+          "target": "css=[data-testid=\"btn-search\"]",
+          "targets": [
+            ["css=[data-testid=\"btn-search\"]", "css:data-testid"],
+            ["xpath=//button[@type='submit']", "xpath:attributes"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "cmd-04-assert-no-results",
+          "comment": "Verify No products found message appears",
+          "command": "assertText",
+          "target": "css=[data-testid=\"no-results\"]",
+          "targets": [
+            ["css=[data-testid=\"no-results\"]", "css:data-testid"],
+            ["xpath=//p[contains(text(),'No products found.')]", "xpath:innerText"]
+          ],
+          "value": "No products found."
+        }
+      ]
+    },
+    {
+      "id": "tc05-empty-search-reset",
+      "name": "TC05 - Empty Keyword and All Categories (Show All)",
+      "commands": [
+        {
+          "id": "cmd-05-open",
+          "comment": "Open website",
+          "command": "open",
+          "target": "/",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "cmd-05-clear-search",
+          "comment": "Clear search input",
+          "command": "type",
+          "target": "css=[data-testid=\"search-input\"]",
+          "targets": [
+            ["css=[data-testid=\"search-input\"]", "css:data-testid"],
+            ["name=q", "name"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "cmd-05-select-all",
+          "comment": "Select All category",
+          "command": "select",
+          "target": "css=[data-testid=\"category-select\"]",
+          "targets": [
+            ["css=[data-testid=\"category-select\"]", "css:data-testid"],
+            ["name=category", "name"]
+          ],
+          "value": "label=All"
+        },
+        {
+          "id": "cmd-05-click-submit",
+          "comment": "Click search submit button",
+          "command": "click",
+          "target": "css=[data-testid=\"btn-search\"]",
+          "targets": [
+            ["css=[data-testid=\"btn-search\"]", "css:data-testid"],
+            ["xpath=//button[@type='submit']", "xpath:attributes"]
+          ],
+          "value": ""
+        },
+        {
+          "id": "cmd-05-assert-list",
+          "comment": "Verify product list is displayed",
+          "command": "assertElementPresent",
+          "target": "css=[data-testid=\"product-list\"]",
+          "targets": [
+            ["css=[data-testid=\"product-list\"]", "css:data-testid"]
+          ],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "suite-search-flow",
+      "name": "Search Products Test Suite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": [
+        "tc01-exact-name-search",
+        "tc02-partial-name-search",
+        "tc03-keyword-and-category",
+        "tc04-no-results-found",
+        "tc05-empty-search-reset"
+      ]
+    }
+  ],
+  "urls": [
+    "https://my-app-nextjs-xi.vercel.app/"
+  ],
+  "plugins": []
+}
+

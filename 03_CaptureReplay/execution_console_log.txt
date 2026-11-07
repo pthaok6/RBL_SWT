@@ -1,0 +1,119 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS D:\Documents\Project\RBL_SWT\03_CaptureReplay> npx playwright test
+
+Running 5 tests using 1 worker
+
+  ✓  1 …search_products.spec.js:20:3 › Search Products - Capture and Replay Test Suite › TC01 - Exact Name Search (4.7s)
+  ✓  2 …js:35:3 › Search Products - Capture and Replay Test Suite › TC02 - Partial Name Search (Case-insensitive) (1.8s)
+  ✓  3 …s:49:3 › Search Products - Capture and Replay Test Suite › TC03 - Search with Keyword and Category Filter (1.3s)
+  ✓  4 …› Search Products - Capture and Replay Test Suite › TC04 - Search Non-Existent Product (No Results Found) (1.1s)
+  ✓  5 …ch Products - Capture and Replay Test Suite › TC05 - Empty Keyword and All Categories (Show All Products) (1.5s)
+
+  5 passed (11.0s)
+
+To open last HTML report run:
+
+  npx playwright show-report
+
+PS D:\Documents\Project\RBL_SWT\03_CaptureReplay> node runner_benchmark.js
+================================================================
+ STARTING CAPTURE/REPLAY BENCHMARK & TIMING MEASUREMENT
+ Target URL: https://my-app-nextjs-xi.vercel.app/
+ Timestamp: 2026-11-03T10:37:14.323Z
+================================================================
+
+
+--- RUN #1 OF 3 ---
+  [Screenshot saved] -> D:\Documents\Project\RBL_SWT\evidence\evidence_TC01_CaptureReplay.png
+  [TC01] Exact Name Search -> Status: PASS | Execution Time: 2603 ms (2.60s)
+  [Screenshot saved] -> D:\Documents\Project\RBL_SWT\evidence\evidence_TC02_CaptureReplay.png
+  [TC02] Partial Name Search -> Status: PASS | Execution Time: 2186 ms (2.19s)
+  [Screenshot saved] -> D:\Documents\Project\RBL_SWT\evidence\evidence_TC03_CaptureReplay.png
+  [TC03] Keyword and Category Filter -> Status: PASS | Execution Time: 2196 ms (2.20s)
+  [Screenshot saved] -> D:\Documents\Project\RBL_SWT\evidence\evidence_TC04_CaptureReplay.png
+  [TC04] Non-Existent Product Search -> Status: PASS | Execution Time: 2193 ms (2.19s)
+  [Screenshot saved] -> D:\Documents\Project\RBL_SWT\evidence\evidence_TC05_CaptureReplay.png
+  [TC05] Empty Keyword and All Categories -> Status: PASS | Execution Time: 2326 ms (2.33s)
+
+--- RUN #2 OF 3 ---
+  [TC01] Exact Name Search -> Status: PASS | Execution Time: 2196 ms (2.20s)
+  [TC02] Partial Name Search -> Status: PASS | Execution Time: 2191 ms (2.19s)
+  [TC03] Keyword and Category Filter -> Status: PASS | Execution Time: 2198 ms (2.20s)
+  [TC04] Non-Existent Product Search -> Status: PASS | Execution Time: 2172 ms (2.17s)
+  [TC05] Empty Keyword and All Categories -> Status: PASS | Execution Time: 2308 ms (2.31s)
+
+--- RUN #3 OF 3 ---
+  [TC01] Exact Name Search -> Status: PASS | Execution Time: 2254 ms (2.25s)
+  [TC02] Partial Name Search -> Status: PASS | Execution Time: 2202 ms (2.20s)
+  [TC03] Keyword and Category Filter -> Status: PASS | Execution Time: 2214 ms (2.21s)
+  [TC04] Non-Existent Product Search -> Status: PASS | Execution Time: 2142 ms (2.14s)
+  [TC05] Empty Keyword and All Categories -> Status: PASS | Execution Time: 2337 ms (2.34s)
+
+================================================================
+ SUMMARY BENCHMARK RESULTS (AVERAGE OF 3 RUNS)
+================================================================
+  TC01 - Exact Name Search: Avg Time = 2.35s (2351ms) | Pass Rate = 100%
+  TC02 - Partial Name Search: Avg Time = 2.19s (2193ms) | Pass Rate = 100%
+  TC03 - Keyword and Category Filter: Avg Time = 2.2s (2203ms) | Pass Rate = 100%
+  TC04 - Non-Existent Product Search: Avg Time = 2.17s (2169ms) | Pass Rate = 100%
+  TC05 - Empty Keyword and All Categories: Avg Time = 2.32s (2324ms) | Pass Rate = 100%
+----------------------------------------------------------------
+  TOTAL AVERAGE EXECUTION TIME (T_auto per suite): 11.24s (11240ms)
+================================================================
+
+Saved timing metrics to:
+  - 03_CaptureReplay/timing_metrics.json
+  - 03_CaptureReplay/03_CaptureReplay_Metrics.csv
+PS D:\Documents\Project\RBL_SWT\03_CaptureReplay> node experiment_broken_locators.js
+================================================================
+ EXPERIMENT: TESTING WITH 3 CHANGED / OUTDATED LOCATORS
+ Demonstrating Capture/Replay script fragility when UI changes
+================================================================
+
+--- TEST STEP 1: Using outdated locator for Search Input ---
+Outdated locator: input.legacy-search-field
+  -> Status: FAILED AS EXPECTED!
+  -> Error Message: TimeoutError - locator.fill: Timeout 3000ms exceeded.
+
+--- TEST STEP 2: Using outdated locator for Category Dropdown ---
+Outdated locator: select#old-filter-category
+  -> Status: FAILED AS EXPECTED!
+  -> Error Message: TimeoutError - locator.selectOption: Timeout 3000ms exceeded.
+
+--- TEST STEP 3: Using outdated locator for Submit Button ---
+Outdated locator: button.btn-submit-search-v1
+  -> Status: FAILED AS EXPECTED!
+  -> Error Message: TimeoutError - locator.click: Timeout 3000ms exceeded.
+
+================================================================
+ CONCLUSION: When 3 locators changed on the UI, 100% of related
+ recorded steps failed due to element not found timeouts.
+ Script requires manual inspection and re-recording/updating.
+================================================================
+PS D:\Documents\Project\RBL_SWT\03_CaptureReplay> node experiment_fixed_locators.js
+================================================================
+ EXPERIMENT: TESTING AFTER FIXING 3 LOCATORS (MAINTENANCE VERIFICATION)
+ Demonstrating script recovery after updating robust selectors
+================================================================
+
+--- TEST STEP 1: Using fixed robust locator for Search Input ---
+Fixed locator: [data-testid="search-input"]
+  -> Status: PASS | Step Execution Time: 33ms
+
+--- TEST STEP 2: Using fixed robust locator for Category Dropdown ---
+Fixed locator: [data-testid="category-select"]
+  -> Status: PASS | Step Execution Time: 5ms
+
+--- TEST STEP 3: Using fixed robust locator for Submit Button ---
+Fixed locator: [data-testid="btn-search"]
+  -> Status: PASS | Step Execution Time: 1044ms
+
+  -> Product verification result visible: true
+
+================================================================
+ RESULT: 100% Steps Passed after updating locators.
+ Maintenance effort verified and documented successfully.
+================================================================
+

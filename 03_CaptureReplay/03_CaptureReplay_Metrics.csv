@@ -1,0 +1,25 @@
+Run,Test_ID,Test_Name,Status,Duration_MS,Duration_SEC,Error
+1,TC01,"Exact Name Search",PASS,2603,2.6,""
+1,TC02,"Partial Name Search",PASS,2186,2.19,""
+1,TC03,"Keyword and Category Filter",PASS,2196,2.2,""
+1,TC04,"Non-Existent Product Search",PASS,2193,2.19,""
+1,TC05,"Empty Keyword and All Categories",PASS,2326,2.33,""
+2,TC01,"Exact Name Search",PASS,2196,2.2,""
+2,TC02,"Partial Name Search",PASS,2191,2.19,""
+2,TC03,"Keyword and Category Filter",PASS,2198,2.2,""
+2,TC04,"Non-Existent Product Search",PASS,2172,2.17,""
+2,TC05,"Empty Keyword and All Categories",PASS,2308,2.31,""
+3,TC01,"Exact Name Search",PASS,2254,2.25,""
+3,TC02,"Partial Name Search",PASS,2202,2.2,""
+3,TC03,"Keyword and Category Filter",PASS,2214,2.21,""
+3,TC04,"Non-Existent Product Search",PASS,2142,2.14,""
+3,TC05,"Empty Keyword and All Categories",PASS,2337,2.34,""
+
+--- SUMMARY AVERAGE ---
+Test_ID,Test_Name,Avg_Duration_MS,Avg_Duration_SEC,Pass_Rate
+TC01,"Exact Name Search",2351,2.35,100%
+TC02,"Partial Name Search",2193,2.19,100%
+TC03,"Keyword and Category Filter",2203,2.2,100%
+TC04,"Non-Existent Product Search",2169,2.17,100%
+TC05,"Empty Keyword and All Categories",2324,2.32,100%
+TOTAL_SUITE,"All 5 Test Cases",11240,11.24,100%
