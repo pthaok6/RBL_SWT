@@ -1,0 +1,7 @@
+test_id,test_name,input,category,assertion_type,expected_result,expected_min_count,description
+TC01,Exact Name Search,Ripple Glass Set,All,exact_title,Ripple Glass Set,1,Tìm kiếm chính xác theo tên sản phẩm
+TC02,Partial Name Search,lamp,All,contains_title,Mori Table Lamp,1,Tìm kiếm không phân biệt hoa thường theo từ khóa con
+TC03,Keyword and Category Filter,table,Lighting,contains_title,Mori Table Lamp,1,Tìm kiếm kết hợp từ khóa và chọn danh mục Lighting
+TC04,Non-Existent Product Search,Laptop Dell XPS,All,no_results,No products found.,0,Tìm kiếm từ khóa không tồn tại kiểm tra thông báo no-results
+TC05,Empty Keyword and All Categories,"",All,min_count,6 products displayed,6,Tìm kiếm chuỗi rỗng hiển thị toàn bộ danh sách 6 sản phẩm
+
