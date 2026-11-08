@@ -1,0 +1,9 @@
+Manual test execution record
+Date: 2026-11-09 (Asia/Ho_Chi_Minh)
+Target: https://my-app-nextjs-xi.vercel.app/
+Scope: TC01-TC05, product search flow
+
+Status: NOT RUN. This environment has no installed Chromium/Chrome, Playwright CLI, or Python Playwright module. No UI interactions, stopwatch measurements, or manual-run screenshots were made.
+Connectivity check: HTTP HEAD request to target returned HTTP/2 200 (server reachable only; not a functional test result).
+
+Per-case actual result, elapsed time, and evidence are intentionally blank in 02_ManualResults.csv until a tester executes the steps in a browser. Existing evidence in ../evidence and member 3/4 logs belong to automation work and are not attributed to this manual run.
