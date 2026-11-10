@@ -2,12 +2,11 @@
   "config": {
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
-      "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay\\node_modules\\@playwright\\test\\cli.js",
-      "test",
-      "--headed"
+      "D:\\GitHub\\RBL_SWT\\03_CaptureReplay\\node_modules\\@playwright\\test\\cli.js",
+      "test"
     ],
-    "configFile": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay\\playwright.config.js",
-    "rootDir": "D:/Documents/Project/RBL_SWT/03_CaptureReplay",
+    "configFile": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay\\playwright.config.js",
+    "rootDir": "D:/GitHub/RBL_SWT/03_CaptureReplay",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -23,7 +22,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "D:/Documents/Project/RBL_SWT/03_CaptureReplay/test-results",
+        "outputDir": "D:/GitHub/RBL_SWT/03_CaptureReplay/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -31,7 +30,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "D:/Documents/Project/RBL_SWT/03_CaptureReplay",
+        "testDir": "D:/GitHub/RBL_SWT/03_CaptureReplay",
         "testIgnore": [],
         "testMatch": [
           "/.*\\.spec\\.js/"
@@ -43,15 +42,15 @@
       {
         "grep": {},
         "grepInvert": null,
-        "outputDir": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay\\test-results",
+        "outputDir": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay\\test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
         },
         "name": "chromium",
-        "testDir": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay",
-        "snapshotDir": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay",
+        "testDir": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay",
+        "snapshotDir": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay",
         "testIgnore": [],
         "testMatch": {},
         "timeout": 30000,
@@ -59,7 +58,7 @@
           "baseURL": "https://my-app-nextjs-xi.vercel.app/",
           "trace": "on-first-retry",
           "screenshot": "on",
-          "headless": false,
+          "headless": true,
           "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
           "viewport": {
             "width": 1280,
@@ -141,18 +140,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1460,
+                      "duration": 4605,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-07T06:39:42.647Z",
+                      "startTime": "2026-11-10T09:00:04.558Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-0878f-te-TC01---Exact-Name-Search-chromium\\test-finished-1.png"
+                          "path": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-0878f-te-TC01---Exact-Name-Search-chromium\\test-finished-1.png"
                         }
                       ]
                     }
@@ -181,18 +180,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1261,
+                      "duration": 1783,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-07T06:39:44.307Z",
+                      "startTime": "2026-11-10T09:00:11.425Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-dc46a-me-Search-Case-insensitive--chromium\\test-finished-1.png"
+                          "path": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-dc46a-me-Search-Case-insensitive--chromium\\test-finished-1.png"
                         }
                       ]
                     }
@@ -221,18 +220,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1242,
+                      "duration": 1691,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-07T06:39:45.579Z",
+                      "startTime": "2026-11-10T09:00:13.237Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-71f52-Keyword-and-Category-Filter-chromium\\test-finished-1.png"
+                          "path": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-71f52-Keyword-and-Category-Filter-chromium\\test-finished-1.png"
                         }
                       ]
                     }
@@ -261,18 +260,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1883,
+                      "duration": 1621,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-07T06:39:46.830Z",
+                      "startTime": "2026-11-10T09:00:14.952Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-6272a-t-Product-No-Results-Found--chromium\\test-finished-1.png"
+                          "path": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-6272a-t-Product-No-Results-Found--chromium\\test-finished-1.png"
                         }
                       ]
                     }
@@ -301,18 +300,18 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2010,
+                      "duration": 1812,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-07T06:39:48.723Z",
+                      "startTime": "2026-11-10T09:00:16.593Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\Documents\\Project\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-7eb2c-tegories-Show-All-Products--chromium\\test-finished-1.png"
+                          "path": "D:\\GitHub\\RBL_SWT\\03_CaptureReplay\\test-results\\search_products-Search-Pro-7eb2c-tegories-Show-All-Products--chromium\\test-finished-1.png"
                         }
                       ]
                     }
@@ -332,8 +331,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-07T06:39:42.313Z",
-    "duration": 8599.431,
+    "startTime": "2026-11-10T09:00:03.461Z",
+    "duration": 22732.59,
     "expected": 5,
     "skipped": 0,
     "unexpected": 0,

@@ -1,6 +1,6 @@
 test_id,test_name,input,category,expected_result,actual_result,status,duration_ms,duration_sec
-TC01,Exact Name Search,Ripple Glass Set,All,Ripple Glass Set,Found exact product: 'Ripple Glass Set',PASS,10952,10.95
-TC02,Partial Name Search,lamp,All,Mori Table Lamp,Found matching product: 'Mori Table Lamp',PASS,2915,2.92
-TC03,Keyword and Category Filter,table,Lighting,Mori Table Lamp,Found matching product: 'Mori Table Lamp',PASS,3101,3.1
-TC04,Non-Existent Product Search,Laptop Dell XPS,All,No products found.,Displayed message: 'No products found.',PASS,2966,2.97
-TC05,Empty Keyword and All Categories,,All,6 products displayed,6 products displayed (expected >= 6),PASS,3809,3.81
+TC01,Exact Name Search,Ripple Glass Set,All,Ripple Glass Set,Found exact product: 'Ripple Glass Set',PASS,3059,3.06
+TC02,Partial Name Search,lamp,All,Mori Table Lamp,Found matching product: 'Mori Table Lamp',PASS,2821,2.82
+TC03,Keyword and Category Filter,table,Lighting,Mori Table Lamp,Found matching product: 'Mori Table Lamp',PASS,2781,2.78
+TC04,Non-Existent Product Search,Laptop Dell XPS,All,No products found.,Displayed message: 'No products found.',PASS,2811,2.81
+TC05,Empty Keyword and All Categories,,All,6 products displayed,6 products displayed (expected >= 6),PASS,3184,3.18

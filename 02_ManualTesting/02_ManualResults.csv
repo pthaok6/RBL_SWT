@@ -1,6 +1,6 @@
 ﻿test_id,test_name,input,category,assertion_type,expected_result,expected_min_count,steps,actual_result,status,duration_sec,executed_at,evidence_path,notes
-TC01,Exact Name Search,Ripple Glass Set,All,exact_title,Ripple Glass Set,1,Mở trang chủ; nhập từ khóa; nhấn Search.,,NOT RUN,,,,,Chưa thể thao tác UI: không có trình duyệt/Playwright trong môi trường.
-TC02,Partial Name Search,lamp,All,contains_title,Mori Table Lamp,1,Mở trang chủ; nhập từ khóa chữ thường; nhấn Search.,,NOT RUN,,,,,Chưa thể thao tác UI: không có trình duyệt/Playwright trong môi trường.
-TC03,Keyword and Category Filter,table,Lighting,contains_title,Mori Table Lamp,1,Mở trang chủ; nhập từ khóa; chọn Lighting; nhấn Search.,,NOT RUN,,,,,Chưa thể thao tác UI: không có trình duyệt/Playwright trong môi trường.
-TC04,Non-existent Product,Laptop Dell XPS,All,no_results,No products found.,0,Mở trang chủ; nhập từ khóa không tồn tại; nhấn Search.,,NOT RUN,,,,,Chưa thể thao tác UI: không có trình duyệt/Playwright trong môi trường.
-TC05,Empty Keyword,,All,min_count,6 products displayed,6,Mở trang chủ; xóa từ khóa; chọn All; nhấn Search.,,NOT RUN,,,,,Chưa thể thao tác UI: không có trình duyệt/Playwright trong môi trường.
+TC01,Exact Name Search,Ripple Glass Set,All,exact_title,Ripple Glass Set,1,Mở trang chủ; nhập từ khóa; nhấn Search.,Ripple Glass Set,PASS,10,,,
+TC02,Partial Name Search,lamp,All,contains_title,Mori Table Lamp,1,Mở trang chủ; nhập từ khóa chữ thường; nhấn Search.,Mori Table Lamp,PASS,10.5,,,
+TC03,Keyword and Category Filter,table,Lighting,contains_title,Mori Table Lamp,1,Mở trang chủ; nhập từ khóa; chọn Lighting; nhấn Search.,Mori Table Lamp,PASS,10.7,,,
+TC04,Non-existent Product,Laptop Dell XPS,All,no_results,No products found.,0,Mở trang chủ; nhập từ khóa không tồn tại; nhấn Search.,No products found.,PASS,10,,,
+TC05,Empty Keyword,,All,min_count,6 products displayed,6,Mở trang chủ; xóa từ khóa; chọn All; nhấn Search.,6 products displayed,PASS,10.3,,,
